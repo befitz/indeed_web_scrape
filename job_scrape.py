@@ -138,11 +138,11 @@ def complete_company_link(results):
     return final
 
 
-def indeed_job_search(ocupation = 'Data Scientist', location = 'Massachusetts', posting_age = '3'):
+def indeed_job_search(occupation = 'Data Scientist', location = 'Massachusetts', posting_age = '3'):
     """
     args: occupation (string), location (string), posting_age (string)"""
-    ocupation_formatted = ocupation.replace(' ', '%20')
-    full_url = 'https://www.indeed.com/jobs?q=' + ocupation_formatted + '&l=' + location + '&fromage='+ posting_age
+    occupation_formatted = occupation.replace(' ', '%20')
+    full_url = 'https://www.indeed.com/jobs?q=' + occupation_formatted + '&l=' + location + '&fromage='+ posting_age
 
     my_job_dict = itterate_through_pages(url)
     res = pd.DataFrame(my_job_dict)
